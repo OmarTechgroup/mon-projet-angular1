@@ -1,0 +1,123 @@
+
+table { 
+
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding:8px;
+    text-align: center
+   
+  }
+
+.titletable{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center
+}
+  
+  
+.container {
+    width: 80vh;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+      
+    }
+    
+.form{
+    display: flex;
+    
+    flex-direction: column;
+    
+   
+}
+
+
+  
+
+    input {
+        display: block;
+        width: 70%;
+        margin: 15px 0;
+        padding: 8px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        
+  
+    }
+    
+    button {
+        background-color: yellow;
+        color: white;
+        padding: 12px;
+        margin-top: 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 80%;
+        color: black;
+        font-weight: bold;
+        font-size: 15px
+    }
+    
+    button:disabled {
+        background-color: blanchedalmond;
+        color: black;
+        border-radius: 0.5rem;
+    }
+
+    .btn-oublie{
+        color: black;
+
+    }
+
+    .btn-oublie:hover{
+        color: red;
+    }
+    .inscription
+    {
+       margin-left: 40px;
+    }
+    .inscire{
+        color: rgb(255, 200, 0)
+        
+        
+
+    }
+
+    .titlelabel{
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+    }
+    .ptitle{
+        color: darkgray;
+    }
+
+ 
+  
+    .MessageErreur{
+  
+      color: red;
+      font-size: 10px;
+    }
+.strong{
+    font-weight: bold;
+    color: red;
+    margin-left: 1px;
+}

@@ -1,0 +1,105 @@
+
+
+
+   <!--debut Formulaire -->
+
+
+    <form  class="form container"   #verificationForm="ngForm" (ngSubmit)="onSubmit(verificationForm)">
+
+        
+    <!-- en tete du fromulaire -->
+    <h1 class="title">Bienvenue</h1>
+    <p class="ptitle">Nous sommes heureux de <br> vous revoir</p>
+
+   <!--debut Formulaire -->
+        <div>
+
+            <!-- Champs email-->
+            <label class="titlelabel" for="email">Email</label><strong class="strong">*</strong>
+
+            <input type="email" id="email" name="email" placeholder="Veuillez saisir votre Email" ngModel required  [(ngModel)]="user.email" #emailtest="ngModel" required  email >
+
+
+            <!-- Messages d'erreur pour l'email -->
+             <div class="error" *ngIf="emailtest.invalid && emailtest.touched">
+                <p class="MessageErreur"  *ngIf="emailtest.errors?.['required']" >L'email est requis </p>
+                <p class="MessageErreur"  *ngIf="emailtest.errors?.['email']" >L'email n'est pas valide </p>
+
+             </div>
+        </div>
+
+
+
+
+
+        <div>
+
+             <!-- Champs de Password -->
+            <label class="titlelabel" for="Password">Password</label>  <strong class="strong">*</strong>
+            <input type="password" id="password" name="password"  placeholder="Veuillez saisir votre mot de passe " required  [(ngModel)]="user.password" #passwordtest="ngModel" required  password>
+
+
+            <!-- Messages d'erreur pour l'email -->
+             <div class="error" *ngIf="passwordtest.invalid && passwordtest.touched">
+                <p class="MessageErreur"  *ngIf="passwordtest.errors?.['required']" >Le mot de passe  est requis </p>
+                <p class="MessageErreur"  *ngIf="passwordtest.errors?.['minlength']" >mot de passe invalide </p>
+
+             </div>
+        </div>
+
+
+
+
+        <!-- Bouton de mot de passe oublié -->
+          
+        <p><a href="#" class="btn-oublie">Mot de passe oublié</a></p>
+
+
+        <!-- Bouton de validation -->  
+
+
+
+        
+        <button type="submit" [disabled]="verificationForm.invalid">Se connecter</button>
+
+       <!-- bouton de inscription-->
+        <div class="inscription">
+            <p>Je n'ai pas de compte , je veux <a href="#" class="inscire">m'inscire</a></p>
+
+        </div>
+
+        <!-- Affichage des informations soumises UNIQUEMENT si le formulaire est valide -->
+
+
+        <div *ngIf="submitted && verificationForm.valid" >
+
+            <h3 class="titletable"> Information de l'utilsateur </h3>
+
+
+        <!-- Tableau d'affichage des informations -->
+            <table    class="table">
+                <tr>
+                    <th >Email</th>
+                    <th>Password</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        {{user.email}}
+                    </td>
+
+                    <td>
+                        {{user.password}}
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+
+
+
+    </form>
+    
